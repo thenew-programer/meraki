@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "AndiSignature";
+  src: url("/fonts/AndiSignature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ModernSans";
+  src: url("/fonts/ModernSans-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes text-write {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Apply the animation to the animated-logo */
+.animated-logo {
+  animation: text-write 5s linear infinite;
+}
+
+@layer base {
+  :root {
+    --background: #757c46; /* Base background color */
+    --foreground: #af9c87; /* Primary text color */
+    --card: #c1b5a3; /* Section background color */
+    --card-foreground: #3f493c; /* Text color for cards */
+    --popover: #e1d9c1; /* Same as background */
+    --popover-foreground: #3f493c; /* Text color for popovers */
+    --primary: #757c46; /* Main brand color */
+    --primary-foreground: #af9c87; /* White text on primary */
+    --secondary: #3f493c; /* Accent color */
+    --secondary-foreground: #e1d9c1; /* Text on secondary */
+    --muted: #c1b5a3; /* Muted background for subtle elements */
+    --muted-foreground: #777777; /* Muted text */
+    --accent: #b8c6a2; /* Accent for icons/highlights */
+    --accent-foreground: #3f493c; /* Text on accent */
+    --destructive: #ff6b6b; /* Destructive action color (e.g., delete) */
+    --destructive-foreground: #ffffff; /* Text on destructive */
+    --border: #c1b5a3; /* Border color */
+    --input: #e1d9c1; /* Input background */
+    --ring: #3f493c; /* Focus ring color */
+    --radius: 0.5rem; /* Border radius */
+    --chart-1: #af9c87; /* Chart color */
+    --chart-2: #757c46; /* Chart color */
+    --chart-3: #b8c6a2; /* Chart color */
+    --chart-4: #ff6b6b; /* Chart color */
+    --chart-5: #c1b5a3; /* Chart color */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
